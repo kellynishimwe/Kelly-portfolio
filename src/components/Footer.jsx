@@ -1,12 +1,14 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; 
+
+
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-6">
+    <footer className="bg-blue-900 text-white py-6 mt-auto">
       <div className="container mx-auto px-6 sm:px-12">
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start">
           {/* Left Section */}
-          <p className="mb-4 sm:mb-0">
+          <p className="mb-4 sm:mb-0 text-center sm:text-left">
             &copy; 2024 Kelly Nishimwe. All rights reserved.
           </p>
 

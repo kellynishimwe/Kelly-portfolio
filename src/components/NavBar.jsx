@@ -31,9 +31,31 @@ const NavBar = () => {
           />
         </Link>
 
+        {/* Navbar Links with Spacing */}
+        <div className="ml-auto hidden lg:flex space-x-8">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About Me", path: "/about" },
+            { name: "Contact Me", path: "/contact" },
+            { name: "Skills", path: "/skills" },
+          ].map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                `text-lg hover:text-blue-400 ${
+                  isActive ? "text-blue-400 font-semibold" : ""
+                }`
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
+
         {/* Hamburger Menu for Mobile */}
         <button
-          className="lg:hidden text-2xl p-2 focus:outline-none"
+          className="lg:hidden text-2xl p-2 focus:outline-none ml-auto"
           onClick={toggleMenu}
         >
           {isOpen ? (
@@ -43,47 +65,46 @@ const NavBar = () => {
           )}
         </button>
 
-        {/* Links */}
-        <ul
-          className={`absolute lg:static left-0 top-0 w-full lg:w-auto lg:flex lg:items-center lg:space-x-8 bg-gray-900 lg:bg-transparent shadow-md lg:shadow-none transform ${
-            isOpen ? "translate-y-0" : "-translate-y-full"
-          } lg:translate-y-0 transition-transform duration-300 ease-in-out lg:transition-none`}
+        {/* Mobile Navigation Menu */}
+        <div
+          className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 transform ${
+            isOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:static lg:translate-x-0 transition-transform duration-300 ease-in-out lg:transition-none flex flex-col lg:hidden items-center justify-center lg:justify-start lg:bg-transparent`}
         >
-          {[
-            { name: "Home", path: "/" },
-            { name: "About Me", path: "/about" },
-            { name: "Contact Me", path: "/contact" },
-            { name: "Skills", path: "/skills" },
-          ].map((link) => (
-            <li key={link.path} className="p-4 lg:p-0">
-              <NavLink
-                to={link.path}
-                onClick={() => setIsOpen(false)} // Close menu on link click
-                className={({ isActive }) =>
-                  `block lg:inline hover:text-blue-400 ${
-                    isActive ? "text-blue-400 font-semibold" : ""
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+          {/* Close Icon Inside Menu */}
+          <button
+            className="absolute top-6 right-6 text-gray-400 hover:text-white transition text-3xl lg:hidden"
+            onClick={toggleMenu}
+          >
+            <X />
+          </button>
+
+          <ul className="flex flex-col space-y-8 text-center">
+            {[
+              { name: "Home", path: "/" },
+              { name: "About Me", path: "/about" },
+              { name: "Contact Me", path: "/contact" },
+              { name: "Skills", path: "/skills" },
+            ].map((link) => (
+              <li key={link.path}>
+                <NavLink
+                  to={link.path}
+                  onClick={() => setIsOpen(false)} // Close menu on link click
+                  className={({ isActive }) =>
+                    `text-lg block hover:text-blue-400 ${
+                      isActive ? "text-blue-400 font-semibold" : ""
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Dark Mode Toggle */}
         <div className="ml-4 hidden lg:block">
-          <button onClick={toggleDarkMode} className="text-2xl">
-            {darkMode ? (
-              <Sun className="text-yellow-400 hover:text-yellow-500 transition" />
-            ) : (
-              <Moon className="text-gray-400 hover:text-gray-300 transition" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Dark Mode Button */}
-        <div className="lg:hidden ml-4">
           <button onClick={toggleDarkMode} className="text-2xl">
             {darkMode ? (
               <Sun className="text-yellow-400 hover:text-yellow-500 transition" />

@@ -22,7 +22,7 @@ const ContactMe = () => {
   return (
     <motion.section
       id="contact"
-      className="py-20 bg-gray-100 dark:bg-gray-900 text-center sm:text-left px-6 sm:px-12"
+      className="py-20 bg-gray-100 dark:bg-gray-900 text-center sm:text-left px-6 sm:px-12 z-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

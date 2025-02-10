@@ -18,7 +18,7 @@ const Skills = () => {
   return (
     <motion.section
       id="skills"
-      className="py-20 bg-gray-100 dark:bg-gray-900"
+      className="py-20 bg-gray-100 dark:bg-gray-900 z-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

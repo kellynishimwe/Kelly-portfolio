@@ -9,8 +9,12 @@ import Skills from "./components/Skills";
 
 const App = () => {
   return (
-      <div>
-        <NavBar />
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <NavBar />
+
+      {/* Main Content Area */}
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />
@@ -18,9 +22,11 @@ const App = () => {
           <Route path="/skills" element={<Skills />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-      </div>
-  
+      </main>
+
+      {/* Footer (Stays at the bottom) */}
+      <Footer />
+    </div>
   );
 };
 
