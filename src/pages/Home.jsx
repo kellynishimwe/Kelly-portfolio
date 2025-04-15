@@ -28,7 +28,7 @@ const Home = () => {
           {/* Profile Image */}
           <div className="md:w-1/3 flex justify-center mb-6 md:mb-0">
             <img
-              src="https://scontent.fnbo1-1.fna.fbcdn.net/v/t39.30808-6/475063583_122166402278272028_6392923656566073379_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG9Wqt4qbIhVTugBXI7prh-zTyvWa8z4CXNPK9ZrzPgJUHbYXCV7Jw2S13TgF6x-4cJjoSNhvqHK_eN0fIPQfc5&_nc_ohc=-Ej-G7zxAk4Q7kNvgG-Ogbl&_nc_oc=AdgsvJShP1YdOIEFf0RpEf-RUbO5gqiXL7Wdbnq5y_5fheao7owMBLyURwPjeIe_6vlHY4ogk6a1z7H2tC_VfRZ4&_nc_zt=23&_nc_ht=scontent.fnbo1-1.fna&_nc_gid=Avmopv8vuDZVbsorPfdm4co&oh=00_AYAFPWP7EB7WXFeoEyx0ZC2_M5FSugG1OZfNkkWbEoD9-w&oe=67AF91BF"
+              src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/486067125_122175099320272028_5469868548852246742_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFC4r7dyy-84qh5U9vRYIzRGGC__e-ep2sYYL_9756naznpJ0Jp9LG0G156TnyJsWeoXGlIFxOFqylY-qukOEen&_nc_ohc=eBQ_5nS0gFIQ7kNvwH0YgeF&_nc_oc=AdnN3vDuhbUgWt3knAHA4kZOkrA749bh9wxoMtsKUyS0oGRnI4EONoJ65ZLFdbpepueG1uO8Xr3ncRTWcD3eXIx3&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=kiVsCQ11DGWFlZXZ6M06bg&oh=00_AfEMhtrHkkVaRBLaAcyWuNz943rUJKfC0ycqVYWtMwy4Rg&oe=68042A6C"
               alt="Kelly Nishimwe"
               className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-blue-500 shadow-lg opacity-90"
             />
